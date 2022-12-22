@@ -38,7 +38,7 @@
             this.buttonTotalBooks = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
             this.panelBottom = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panelMain = new System.Windows.Forms.Panel();
             this.panelSide.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.buttonAboutUs.TabIndex = 0;
             this.buttonAboutUs.Text = "About Us";
             this.buttonAboutUs.UseVisualStyleBackColor = true;
+            this.buttonAboutUs.Click += new System.EventHandler(this.buttonAboutUs_Click);
             // 
             // buttonAuthorizing
             // 
@@ -75,6 +76,7 @@
             this.buttonAuthorizing.TabIndex = 0;
             this.buttonAuthorizing.Text = "Authorizing";
             this.buttonAuthorizing.UseVisualStyleBackColor = true;
+            this.buttonAuthorizing.Click += new System.EventHandler(this.buttonAuthorizing_Click);
             // 
             // buttonRemoveBooks
             // 
@@ -84,6 +86,7 @@
             this.buttonRemoveBooks.TabIndex = 0;
             this.buttonRemoveBooks.Text = "Remove books";
             this.buttonRemoveBooks.UseVisualStyleBackColor = true;
+            this.buttonRemoveBooks.Click += new System.EventHandler(this.buttonRemoveBooks_Click);
             // 
             // buttonMemberships
             // 
@@ -93,6 +96,7 @@
             this.buttonMemberships.TabIndex = 0;
             this.buttonMemberships.Text = "Memberships";
             this.buttonMemberships.UseVisualStyleBackColor = true;
+            this.buttonMemberships.Click += new System.EventHandler(this.buttonMemberships_Click);
             // 
             // buttonAddNewBooks
             // 
@@ -102,6 +106,7 @@
             this.buttonAddNewBooks.TabIndex = 0;
             this.buttonAddNewBooks.Text = "Add new books";
             this.buttonAddNewBooks.UseVisualStyleBackColor = true;
+            this.buttonAddNewBooks.Click += new System.EventHandler(this.buttonAddNewBooks_Click);
             // 
             // buttonCategories
             // 
@@ -111,6 +116,7 @@
             this.buttonCategories.TabIndex = 0;
             this.buttonCategories.Text = "Categories";
             this.buttonCategories.UseVisualStyleBackColor = true;
+            this.buttonCategories.Click += new System.EventHandler(this.buttonCategories_Click);
             // 
             // buttonTotalBooks
             // 
@@ -120,6 +126,7 @@
             this.buttonTotalBooks.TabIndex = 0;
             this.buttonTotalBooks.Text = "Total Books";
             this.buttonTotalBooks.UseVisualStyleBackColor = true;
+            this.buttonTotalBooks.Click += new System.EventHandler(this.buttonTotalBooks_Click);
             // 
             // panelTop
             // 
@@ -127,7 +134,7 @@
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(340, 0);
             this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1011, 113);
+            this.panelTop.Size = new System.Drawing.Size(1011, 142);
             this.panelTop.TabIndex = 1;
             // 
             // panelBottom
@@ -139,21 +146,21 @@
             this.panelBottom.Size = new System.Drawing.Size(1011, 45);
             this.panelBottom.TabIndex = 2;
             // 
-            // panel1
+            // panelMain
             // 
-            this.panel1.BackColor = System.Drawing.Color.Wheat;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(340, 113);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1011, 582);
-            this.panel1.TabIndex = 3;
+            this.panelMain.BackColor = System.Drawing.Color.Wheat;
+            this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMain.Location = new System.Drawing.Point(340, 142);
+            this.panelMain.Name = "panelMain";
+            this.panelMain.Size = new System.Drawing.Size(1011, 553);
+            this.panelMain.TabIndex = 3;
             // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1351, 740);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelBottom);
             this.Controls.Add(this.panelTop);
             this.Controls.Add(this.panelSide);
@@ -169,7 +176,7 @@
         private Panel panelSide;
         private Panel panelTop;
         private Panel panelBottom;
-        private Panel panel1;
+        private Panel panelMain;
         private Button buttonAddNewBooks;
         private Button buttonCategories;
         private Button buttonTotalBooks;
