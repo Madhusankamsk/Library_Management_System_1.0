@@ -9,6 +9,10 @@ namespace Library_Management_System_1._0
         Controllers.UserControlRemoveBooks removeBooks = new Controllers.UserControlRemoveBooks();
         Controllers.UserControlAuthorizing authorizing = new Controllers.UserControlAuthorizing();
         Controllers.UserControlAboutUs aboutUs = new Controllers.UserControlAboutUs();
+        Controllers.UserControlReturns returns = new Controllers.UserControlReturns();
+        Controllers.UserControlBorrows borrows = new Controllers.UserControlBorrows();
+
+
 
 
 
@@ -64,6 +68,20 @@ namespace Library_Management_System_1._0
             panelMain.Controls.Clear();
             panelMain.Controls.Add(aboutUs);
             aboutUs.Dock = DockStyle.Fill;
+        }
+
+        private void buttonBorrows_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(borrows);
+            borrows.Dock = DockStyle.Fill;
+        }
+
+        private void buttonReturns_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            panelMain.Controls.Add(returns);
+            returns.Dock = DockStyle.Fill;
         }
     }
 }

@@ -37,9 +37,21 @@
             this.buttonCategories = new System.Windows.Forms.Button();
             this.buttonTotalBooks = new System.Windows.Forms.Button();
             this.panelTop = new System.Windows.Forms.Panel();
+            this.buttonSearch = new System.Windows.Forms.Button();
+            this.textBoxSearchBox = new System.Windows.Forms.TextBox();
+            this.buttonReturns = new System.Windows.Forms.Button();
+            this.buttonBorrows = new System.Windows.Forms.Button();
             this.panelBottom = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelSide.SuspendLayout();
+            this.panelTop.SuspendLayout();
+            this.panelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSide
@@ -131,11 +143,51 @@
             // panelTop
             // 
             this.panelTop.BackColor = System.Drawing.SystemColors.Highlight;
+            this.panelTop.Controls.Add(this.buttonSearch);
+            this.panelTop.Controls.Add(this.textBoxSearchBox);
+            this.panelTop.Controls.Add(this.buttonReturns);
+            this.panelTop.Controls.Add(this.buttonBorrows);
             this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTop.Location = new System.Drawing.Point(340, 0);
             this.panelTop.Name = "panelTop";
             this.panelTop.Size = new System.Drawing.Size(1011, 142);
             this.panelTop.TabIndex = 1;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(866, 72);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(94, 29);
+            this.buttonSearch.TabIndex = 20;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            // 
+            // textBoxSearchBox
+            // 
+            this.textBoxSearchBox.Location = new System.Drawing.Point(580, 73);
+            this.textBoxSearchBox.Name = "textBoxSearchBox";
+            this.textBoxSearchBox.Size = new System.Drawing.Size(222, 27);
+            this.textBoxSearchBox.TabIndex = 19;
+            // 
+            // buttonReturns
+            // 
+            this.buttonReturns.Location = new System.Drawing.Point(384, 71);
+            this.buttonReturns.Name = "buttonReturns";
+            this.buttonReturns.Size = new System.Drawing.Size(94, 29);
+            this.buttonReturns.TabIndex = 18;
+            this.buttonReturns.Text = "Returns";
+            this.buttonReturns.UseVisualStyleBackColor = true;
+            this.buttonReturns.Click += new System.EventHandler(this.buttonReturns_Click);
+            // 
+            // buttonBorrows
+            // 
+            this.buttonBorrows.Location = new System.Drawing.Point(239, 71);
+            this.buttonBorrows.Name = "buttonBorrows";
+            this.buttonBorrows.Size = new System.Drawing.Size(94, 29);
+            this.buttonBorrows.TabIndex = 0;
+            this.buttonBorrows.Text = "Borrows";
+            this.buttonBorrows.UseVisualStyleBackColor = true;
+            this.buttonBorrows.Click += new System.EventHandler(this.buttonBorrows_Click);
             // 
             // panelBottom
             // 
@@ -149,11 +201,77 @@
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.Wheat;
+            this.panelMain.Controls.Add(this.label6);
+            this.panelMain.Controls.Add(this.label5);
+            this.panelMain.Controls.Add(this.label4);
+            this.panelMain.Controls.Add(this.label3);
+            this.panelMain.Controls.Add(this.label2);
+            this.panelMain.Controls.Add(this.label1);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(340, 142);
             this.panelMain.Name = "panelMain";
             this.panelMain.Size = new System.Drawing.Size(1011, 553);
             this.panelMain.TabIndex = 3;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(453, 233);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 20);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "269";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(453, 198);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(25, 20);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "66";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(453, 160);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 20);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "1500";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(293, 233);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Over-due";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(293, 198);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 20);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Borrowed";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(293, 161);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(86, 20);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Total Books";
             // 
             // Home
             // 
@@ -167,6 +285,10 @@
             this.Name = "Home";
             this.Text = "Form1";
             this.panelSide.ResumeLayout(false);
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -184,5 +306,15 @@
         private Button buttonMemberships;
         private Button buttonAboutUs;
         private Button buttonAuthorizing;
+        private Label label6;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private Button buttonBorrows;
+        private Button buttonReturns;
+        private Button buttonSearch;
+        private TextBox textBoxSearchBox;
     }
 }
